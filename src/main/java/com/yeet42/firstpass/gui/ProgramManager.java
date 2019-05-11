@@ -55,6 +55,7 @@ public class ProgramManager extends Application {
         new SceneRegister();
         new SceneSecondFactor();
         new SceneRegistrationTwoFactor();
+        new SceneMain();
     }
 
     private void addCSS(String path) {

@@ -3,13 +3,37 @@ package com.yeet42.firstpass.data;
 import java.util.Objects;
 
 public class DataEntry {
-    public String use;
-    public String username;
-    public String password;
+    private String use;
+    private String username;
+    private String password;
 
     public DataEntry(String use, String username, String password) {
         this.use = use;
         this.username = username;
+        this.password = password;
+    }
+
+    public String getUse() {
+        return use;
+    }
+
+    public void setUse(String use) {
+        this.use = use;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
         this.password = password;
     }
 
