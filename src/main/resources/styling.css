@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'FontAwesome';
+    src: url("/fontawesome-webfont.ttf");
+}
+
+.jfx-text-field {
+    -jfx-focus-color: "#2E86C1";
+    -jfx-label-float: true;
+    -jfx-disable-animation: false;
+}
+
+.jfx-password-field {
+    -jfx-focus-color: "#2E86C1";
+    -jfx-label-float: true;
+    -jfx-disable-animation: false;
+}
+
+#blue-button {
+    -fx-background-color: "#2E86C1";
+    -fx-text-fill: "#ffffff";
+    -jfx-button-type: RAISED;
+}
+
+#title-text {
+    -fx-font-size: 20px;
+    -fx-font-family: "Arial";
+}
+
+#profile-name-text {
+    -fx-font-size: 40px;
+    -fx-font-family: "Arial";
+}
+
+#main-menu-text {
+    -fx-font-size: 40px;
+    -fx-font-family: "Arial";
+}
+
+#main-menu-logo {
+    -fx-font-size: 75px;
+    -fx-font-family: "FontAwesome";
+}
+
+#sidebar {
+    -fx-background-color: "#8FBFDC";
+}
+
+#activity-menu-icon {
+    -fx-font-size: 30px;
+    -fx-text-fill: "#2E86C1";
+    -fx-font-family: 'FontAwesome';
+}
+
+#follow-button {
+    -fx-font-size: 15px;
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+#follow-button:hover {
+    -fx-underline: true;
+}
+
+#follow-not-button {
+    -fx-font-size: 15px;
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+#clickable:hover {
+    -fx-underline: true;
+}
+
+#enter-usb-text {
+    -fx-font-size: 15px;
+    -fx-background-color: #b5b5b5;
+}
