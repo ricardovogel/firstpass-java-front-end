@@ -46,7 +46,7 @@
 }
 
 #activity-menu-icon {
-    -fx-font-size: 30px;
+    -fx-font-size: 15px;
     -fx-text-fill: "#2E86C1";
     -fx-font-family: 'FontAwesome';
 }

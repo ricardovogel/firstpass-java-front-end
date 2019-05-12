@@ -14,5 +14,5 @@ public interface USBInterface {
      boolean deleteEntry(String platform, String masterPassword);
      boolean changeMasterPassword(String oldMasterPassword, String newMasterPassword);
      DataEntry requestItem(String platform, String masterPassword);
-     List<String> requestUses(String masterPassword);
+     List<String> requestPlatforms(String masterPassword);
 }
