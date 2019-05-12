@@ -4,7 +4,7 @@ import com.yeet42.firstpass.guiinteraction.TempUSB;
 import com.yeet42.firstpass.guiinteraction.USBInterface;
 
 class GUIConfig {
-    static final Scenes FIRSTSCENE = Scenes.MAIN_SCREEN;
+    static final Scenes FIRSTSCENE = Scenes.LOGIN;
     static final Scenes AFTER_LOGIN_SCENE = Scenes.MAIN_SCREEN;
     static final int DEFAULT_HEIGHT = 600;
     static final int DEFAULT_WIDTH = 900;

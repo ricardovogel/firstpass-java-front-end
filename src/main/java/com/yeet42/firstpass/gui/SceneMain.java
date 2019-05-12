@@ -24,6 +24,9 @@ public class SceneMain extends ProgramScene {
 
         list.setOnMouseClicked(event -> {
             String platform = event.getTarget().toString().split("'")[1];
+            if (platform == null || platform.equals("null")) {
+                return;
+            }
             DataEntry dataEntry = GUIConfig.USB_INTERFACE.requestItem(platform, Session.userKey);
             new SceneEntry(dataEntry).switchTo();
         });

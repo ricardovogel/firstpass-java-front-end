@@ -26,12 +26,12 @@ public class TempUSB implements USBInterface {
     }
 
     @Override
-    public DataEntry requestItem(String use, String masterPassword) {
-        return new DataEntry("aaa", "bbb", "ccc");
+    public DataEntry requestItem(String platform, String masterPassword) {
+        return new DataEntry(platform, "bbb", "ccc");
     }
 
     @Override
-    public List<String> requestUses(String masterPassword) {
+    public List<String> requestPlatforms(String masterPassword) {
         return null;
     }
 }

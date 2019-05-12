@@ -14,6 +14,7 @@ com\yeet42\firstpass\gui\CheckUSBRegister.class
 com\yeet42\firstpass\gui\SceneMain.class
 com\yeet42\firstpass\gui\SceneRegistrationTwoFactor.class
 com\yeet42\firstpass\gui\CheckUSB.class
+com\yeet42\firstpass\gui\SceneAddEntry.class
 com\yeet42\firstpass\guiinteraction\Login.class
 com\yeet42\firstpass\gui\FieldMethods.class
 com\yeet42\firstpass\gui\SceneRegister$SecondPasswordValidator.class

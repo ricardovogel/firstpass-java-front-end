@@ -9,4 +9,5 @@ public enum Scenes {
     SECOND_FACTOR,
 
     MAIN_SCREEN,
+    ADD_ENTRY,
 }
