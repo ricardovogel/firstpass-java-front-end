@@ -15,10 +15,10 @@ public class SceneRegistrationTwoFactor extends ProgramScene{
 
     @Override
     protected void generateScene() {
-        Text logo = new Text("\uf287");
+        Text logo = new Text("\uf294");
         logo.setId("main-menu-logo");
 
-        Text text = new Text("Please enter your USB");
+        Text text = new Text("Please Connect via Bluetooth");
         text.setId("enter-usb-text");
 
         VBox vBox = new VBox();
@@ -30,13 +30,12 @@ public class SceneRegistrationTwoFactor extends ProgramScene{
 
     @Override
     protected void setSceneTitle() {
-        setSceneTitle("Register USB");
+        setSceneTitle("Register Bluetooth");
     }
 
     @Override
     void switchTo() {
         super.switchTo();
-        System.out.println("dab");
 
         Timer timer = new Timer();
         timer.schedule(new CheckUSBRegister(), 1000, 500);

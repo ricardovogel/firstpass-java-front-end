@@ -17,10 +17,10 @@ public class SceneSecondFactor extends ProgramScene {
 
     @Override
     protected void generateScene() {
-        Text logo = new Text("\uf287");
+        Text logo = new Text("\uf294");
         logo.setId("main-menu-logo");
 
-        Text text = new Text("Please enter your USB");
+        Text text = new Text("Please Connect via Bluetooth");
         text.setId("enter-usb-text");
 
         VBox vBox = new VBox();
@@ -32,7 +32,7 @@ public class SceneSecondFactor extends ProgramScene {
 
     @Override
     protected void setSceneTitle() {
-        setSceneTitle("Second Factor");
+        setSceneTitle("Bluetooth Authentication");
     }
 
     @Override

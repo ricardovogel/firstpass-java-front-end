@@ -9,7 +9,7 @@ class GUIConfig {
     static final int DEFAULT_HEIGHT = 600;
     static final int DEFAULT_WIDTH = 900;
     static final boolean IS_RESIZABLE = false;
-    static final String PROGRAM_NAME = "JavaFX Scene Switcher";
+    static final String PROGRAM_NAME = "FirstPass";
 
     static final USBInterface USB_INTERFACE = new TempUSB();
 }
