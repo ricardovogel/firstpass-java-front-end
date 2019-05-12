@@ -4,6 +4,7 @@ com\yeet42\firstpass\data\DataEntry.class
 com\yeet42\firstpass\gui\SceneRegister$PasswordLowercaseRule.class
 com\yeet42\firstpass\gui\SceneRegister.class
 com\yeet42\firstpass\guiinteraction\PasswordChecking.class
+com\yeet42\firstpass\gui\SceneEntry.class
 com\yeet42\firstpass\gui\SceneSecondFactor.class
 com\yeet42\firstpass\data\Passwords.class
 com\yeet42\firstpass\gui\SceneRegister$PasswordLengthRule.class

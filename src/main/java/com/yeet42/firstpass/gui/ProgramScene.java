@@ -8,6 +8,9 @@ public abstract class ProgramScene {
     private String sceneTitle;
     private Parent primaryParent;
 
+    ProgramScene() {
+    }
+
     ProgramScene(Scenes sceneEnum) {
         this.sceneEnum = sceneEnum;
         ProgramManager.putScene(this.sceneEnum, this);

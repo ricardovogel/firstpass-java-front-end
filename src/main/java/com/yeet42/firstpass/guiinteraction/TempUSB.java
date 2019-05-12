@@ -27,7 +27,7 @@ public class TempUSB implements USBInterface {
 
     @Override
     public DataEntry requestItem(String use, String masterPassword) {
-        return null;
+        return new DataEntry("aaa", "bbb", "ccc");
     }
 
     @Override
