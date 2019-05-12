@@ -3,22 +3,22 @@ package com.yeet42.firstpass.data;
 import java.util.Objects;
 
 public class DataEntry {
-    private String use;
+    private String platform;
     private String username;
     private String password;
 
-    public DataEntry(String use, String username, String password) {
-        this.use = use;
+    public DataEntry(String platform, String username, String password) {
+        this.platform = platform;
         this.username = username;
         this.password = password;
     }
 
-    public String getUse() {
-        return use;
+    public String getPlatform() {
+        return platform;
     }
 
-    public void setUse(String use) {
-        this.use = use;
+    public void setPlatform(String platform) {
+        this.platform = platform;
     }
 
     public String getUsername() {
@@ -42,13 +42,13 @@ public class DataEntry {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         DataEntry dataEntry = (DataEntry) o;
-        return Objects.equals(use, dataEntry.use) &&
+        return Objects.equals(platform, dataEntry.platform) &&
                 Objects.equals(username, dataEntry.username) &&
                 Objects.equals(password, dataEntry.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(use, username, password);
+        return Objects.hash(platform, username, password);
     }
 }

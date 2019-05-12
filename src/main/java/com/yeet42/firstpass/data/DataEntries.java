@@ -4,9 +4,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class DataEntries {
-    public static ObservableList<DataEntry> data = FXCollections.observableArrayList();
-
-    public void addItems(DataEntry... entries){
-        data.addAll(entries);
-    }
+    /**
+     * Only stores the uses, actual requests get sent.
+     */
+    public static ObservableList<String> data = FXCollections.observableArrayList();
 }

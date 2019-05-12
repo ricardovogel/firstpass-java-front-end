@@ -10,9 +10,9 @@ public interface USBInterface {
      * Adds an item to the pi
      */
      boolean addItem(DataEntry dataEntry, String masterPassword);
-     boolean changeEntry(String use, DataEntry newEntry, String masterPassword);
-     boolean deleteEntry(String use, String masterPassword);
+     boolean changeEntry(String platform, DataEntry newEntry, String masterPassword);
+     boolean deleteEntry(String platform, String masterPassword);
      boolean changeMasterPassword(String oldMasterPassword, String newMasterPassword);
-     DataEntry requestItem(String use, String masterPassword);
+     DataEntry requestItem(String platform, String masterPassword);
      List<String> requestUses(String masterPassword);
 }
