@@ -44,7 +44,6 @@ public class SceneRegistrationTwoFactor extends ProgramScene{
 
 class CheckUSBRegister extends TimerTask {
     public void run() {
-        System.out.println("dab");
         if (SecondFactor.create()) {
             ProgramManager.openScene(GUIConfig.FIRSTSCENE);
         }

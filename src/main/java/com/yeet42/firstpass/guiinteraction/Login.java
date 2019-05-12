@@ -11,8 +11,7 @@ public final class Login {
     }
 
 
-    public static void register(final String name, final String username,
-                                final String email, final String password) {
+    public static void register(final String password) {
     }
 
     public static boolean usernameTaken(final String username) {

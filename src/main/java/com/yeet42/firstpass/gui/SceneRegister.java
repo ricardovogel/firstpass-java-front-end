@@ -1,7 +1,6 @@
 package com.yeet42.firstpass.gui;
 
 import com.jfoenix.controls.JFXPasswordField;
-import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
 import com.jfoenix.validation.base.ValidatorBase;
 import com.yeet42.firstpass.guiinteraction.Login;
@@ -28,42 +27,6 @@ public class SceneRegister extends ProgramScene {
         final Text sceneTitle = new Text("Register");
         sceneTitle.setId("title-text");
         final int fieldWidth = 250;
-
-        // Name
-        final JFXTextField nameField = FieldMethods.generateJfxTextField("Name", fieldWidth);
-        final RequiredFieldValidator nameValidator = new RequiredFieldValidator();
-        nameValidator.setMessage("Please enter a name.");
-        nameField.getValidators().add(nameValidator);
-        nameField.focusedProperty().addListener((o, oldVal, newVal) -> {
-            if (!newVal) {
-                nameField.validate();
-            }
-        });
-
-        // Email
-        final JFXTextField emailField = FieldMethods.generateJfxTextField("Email", fieldWidth);
-        final RequiredFieldValidator emailValidator = new RequiredFieldValidator();
-        emailValidator.setMessage("Please enter an email address.");
-        final CorrectEmailValidator correctEmailValidator = new CorrectEmailValidator();
-        correctEmailValidator.setMessage("Please enter a correct email address");
-        emailField.getValidators().addAll(emailValidator, correctEmailValidator);
-        emailField.focusedProperty().addListener((o, oldVal, newVal) -> {
-            if (!newVal) {
-                emailField.validate();
-            }
-        });
-
-        // Username
-        final JFXTextField usernameField = FieldMethods.generateJfxTextField(
-                "Username", fieldWidth);
-        final RequiredFieldValidator usernameValidator = new RequiredFieldValidator();
-        usernameValidator.setMessage("Please enter a username.");
-        usernameField.getValidators().add(usernameValidator);
-        usernameField.focusedProperty().addListener((o, oldVal, newVal) -> {
-            if (!newVal) {
-                usernameField.validate();
-            }
-        });
 
         // Password1
         final JFXPasswordField passwordField = FieldMethods
@@ -128,9 +91,6 @@ public class SceneRegister extends ProgramScene {
         // Register button
         final Button registerButton = new Button("Register");
         registerButton.setOnAction(event -> register(
-                nameField,
-                usernameField,
-                emailField,
                 passwordField,
                 password2Field
         ));
@@ -149,9 +109,6 @@ public class SceneRegister extends ProgramScene {
 
         registrationForm.getChildren().addAll(
                 sceneTitle,
-                nameField,
-                emailField,
-                usernameField,
                 passwordField,
                 password2Field,
                 hbBtn
@@ -169,30 +126,18 @@ public class SceneRegister extends ProgramScene {
     /**
      * Registers a user. If something is wrong, change the mistakeText and return.
      *
-     * @param nameF      name field
-     * @param usernameF  username field
-     * @param emailF     email field
      * @param passwordF  first password field
      * @param password2F second password field
      */
-    private void register(final JFXTextField nameF, final JFXTextField usernameF,
-                          final JFXTextField emailF, final JFXPasswordField passwordF,
+    private void register(final JFXPasswordField passwordF,
                           final JFXPasswordField password2F) {
-        if (!nameF.validate()
-                | !usernameF.validate()
-                | !emailF.validate()
-                | !passwordF.validate()
-                | !password2F.validate()
-        ) {
+        if (!passwordF.validate() | !password2F.validate()) {
             return;
         }
 
-        final String name = nameF.getText();
-        final String username = usernameF.getText();
-        final String email = emailF.getText();
         final String password = passwordF.getText();
 
-        Login.register(name, username, email, password);
+        Login.register(password);
         ProgramManager.openScene(Scenes.REGISTRATION_SECOND_FACTOR);
     }
 
