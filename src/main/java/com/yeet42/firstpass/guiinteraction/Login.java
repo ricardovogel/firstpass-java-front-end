@@ -2,9 +2,11 @@ package com.yeet42.firstpass.guiinteraction;
 
 public final class Login {
 
-    private Login() { }
+    private Login() {
+    }
 
-    public static boolean validatePassword(final String username, final String password) {
+    public static boolean validatePassword(final String password) {
+        Session.userKey = password;
         return true;
     }
 

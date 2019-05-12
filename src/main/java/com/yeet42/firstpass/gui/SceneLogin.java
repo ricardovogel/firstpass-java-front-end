@@ -1,7 +1,6 @@
 package com.yeet42.firstpass.gui;
 
 import com.jfoenix.controls.JFXPasswordField;
-import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
 import com.yeet42.firstpass.guiinteraction.Login;
 import javafx.geometry.Pos;
@@ -30,20 +29,20 @@ public class SceneLogin extends ProgramScene {
 
         final int fieldWidth = 200;
         // Username
-        final JFXTextField userTextField =
-                FieldMethods.generateJfxTextField("Username", fieldWidth);
-        RequiredFieldValidator usernameValidator = new RequiredFieldValidator();
-        usernameValidator.setMessage("Please enter a username.");
-        userTextField.getValidators().add(usernameValidator);
-        userTextField.focusedProperty().addListener((o, oldVal, newVal) -> {
-            if (!newVal) {
-                userTextField.validate();
-            }
-        });
+//        final JFXTextField userTextField =
+//                FieldMethods.generateJfxTextField("Username", fieldWidth);
+//        RequiredFieldValidator usernameValidator = new RequiredFieldValidator();
+//        usernameValidator.setMessage("Please enter a username.");
+//        userTextField.getValidators().add(usernameValidator);
+//        userTextField.focusedProperty().addListener((o, oldVal, newVal) -> {
+//            if (!newVal) {
+//                userTextField.validate();
+//            }
+//        });
 
         // Password
         final JFXPasswordField passwordField =
-                FieldMethods.generateJfxPasswordField("Password", fieldWidth);
+                FieldMethods.generateJfxPasswordField("Master password", fieldWidth);
         RequiredFieldValidator passwordValidator = new RequiredFieldValidator();
         passwordValidator.setMessage("Please enter a password.");
         passwordField.getValidators().add(passwordValidator);
@@ -66,7 +65,7 @@ public class SceneLogin extends ProgramScene {
         buttonGrid.setHgap(10);
         buttonGrid.add(signInButton, 0, 0);
         signInButton.setOnAction(event -> {
-            signIn(userTextField, passwordField, failedLogin);
+            signIn(passwordField, failedLogin);
             // clear password field after user login to ensure security
             passwordField.clear();
         });
@@ -87,7 +86,6 @@ public class SceneLogin extends ProgramScene {
         loginForm.getChildren().addAll(
                 bufferText,
                 sceneTitle,
-                userTextField,
                 passwordField,
                 buttonGrid,
                 failedLogin
@@ -101,14 +99,12 @@ public class SceneLogin extends ProgramScene {
         this.setSceneTitle("Log In");
     }
 
-    private void signIn(final JFXTextField usernameField,
-                        final JFXPasswordField passwordField, final Text failedLogin) {
+    private void signIn(final JFXPasswordField passwordField, final Text failedLogin) {
 
-        if (!usernameField.validate() | !passwordField.validate()) {
+        if (!passwordField.validate()) {
             return;
         }
-        if (Login.validatePassword(usernameField.getText(),
-                passwordField.getText())) {
+        if (Login.validatePassword(passwordField.getText())) {
             ProgramManager.openScene(Scenes.SECOND_FACTOR);
         } else {
             failedLogin.setVisible(true);
